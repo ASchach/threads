@@ -1,0 +1,9 @@
+
+c
+java:S2142)"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ÿóë÷§.
+E
+java:S1148*"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÿóë÷§.
+U	java:S1065"9Replace this use of System.out or System.err by a logger.(û©İë8ÍØ÷§.
+y	java:S127"XRefactor the code in order to not assign to this loop counter from within the loop body.(‡ÑÆüùÿÿÿÿ8Ø¤â÷§.
+D
+java:S1604"(Make this anonymous inner class a lambda(ô§ê8¾àÃ÷§.

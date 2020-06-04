@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300" prefWidth="500" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
+   <children>
+      <TextArea fx:id="output" layoutX="30.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="300.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#startCounting" text="Start counting" />
+      <Label layoutX="346.0" layoutY="107.0" text="Max" />
+      <TextField fx:id="max_value" layoutX="295.0" layoutY="138.0" text="100000" />
+   </children>
+</AnchorPane>
