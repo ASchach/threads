@@ -9,7 +9,7 @@ import java.util.List;
 public class Counter {
 
 //variables
-    private TextArea output;
+    private Output output;
 
     private int max = 200_000;
 
@@ -24,7 +24,7 @@ public class Counter {
     }
 
 //methods
-    public void setOutput(TextArea output) {
+    public void setOutput(Output output) {
         this.output = output;
     }
 
@@ -47,12 +47,7 @@ public class Counter {
                         increment();
                     }
                     if(output != null) {
-                        Platform.runLater(new Runnable() {
-                            @Override
-                            public void run() {
-                                output.setText(output.getText() + "Thread " + finalI + " Finished counting\n");
-                            }
-                        });
+                        output.append("Thread " + finalI + " finished counting");
                     }
                 }
             });
@@ -73,9 +68,14 @@ public class Counter {
         value++;
     }
     public static void main(String[] args) {
-        Counter counter = new Counter();
+        Counter counter = new Counter(500_000);
+        counter.setOutput(new Output() {
+            @Override
+            public void append(String message) {
+                System.out.println(message);
+            }
+        });
         counter.startIncrement();
 
-        System.out.println(counter.getValue());
     }
 }
